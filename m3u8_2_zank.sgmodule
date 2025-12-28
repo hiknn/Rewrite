@@ -1,9 +1,9 @@
 #!name= 涩涩会员解析
-#!desc=破解 zank 网站会员和金币视频
+#!desc=破解 g 头条，熊王网站会员和金币视频
 #!author=hiknnnnnn
 
 [Script]
-m3u8 = type=http-request,pattern=^https:\/\/nbpzuk\.com\/video\/\d{8}\/\d{3}\/[a-z0-9]{30}\/index\.m3u8,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/m3u8/m3u8_2.js,script-update-interval=0
+m3u8 = type=http-request,pattern=https?://(fxwmcd12z4|amcdngt12z4)\.[a-z0-9]+\.cn/[^/]+/[^/]+/[a-z0-9/]+\.m3u8,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/m3u8/m3u8_2.js,script-update-interval=0
 
 [MITM]
-hostname = %APPEND% nbpzuk.com
+hostname = %APPEND% amcdngt12z4.*.cn,fxwmcd12z4.*.cn
