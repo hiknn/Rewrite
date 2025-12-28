@@ -1,10 +1,10 @@
 #!name= 涩涩会员解析
-#!desc=破解小蓝视频，gtv等 gv 网站会员和金币视频
+#!desc=破解小蓝视频、搜同网站会员和金币视频
 #!author=hiknnnnnn
 
 
 [Script]
-m3u8 = type=http-request,pattern=^https:\/\/[^\/]*\..*\.cn\/\w+\/[a-z0-9]{32}\/[a-z0-9]{32}\.m3u8,requires-body=0,script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/m3u8/m3u8_2.js
+m3u8 = type=http-request,pattern=^https:\/\/(?:(?:120play|long)\..*?\.cn|h5play\..*?\.com|.*?\.fipxor\.cn|.*?\.10play\.zbzfwi\.cn)\/\w+\/[a-z0-9]{32}\/[a-z0-9]{32}\.m3u8$,requires-body=0,script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/m3u8/m3u8_2.js
 
 [MITM]
-hostname = %APPEND% 120play.*.cn,h5play.*.com,long.*.cn,*.fipxor.cn,*.10play.zbzfwi.cn,amcdngt12z4.*.cn
+hostname = %APPEND% 120play.*.cn,h5play.*.com,long.*.cn,*.fipxor.cn,*.10play.zbzfwi.cn
