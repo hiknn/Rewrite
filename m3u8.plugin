@@ -1,0 +1,10 @@
+#!desc=解析GTV、小蓝视频等 m3u8 地址
+#!author=hiknn
+#!icon=https://raw.githubusercontent.com/luestr/IconCenter/master/Other/Play.png
+
+[Script]
+
+m3u8 = type=http-request,pattern=^https:\/\/120play\.[^\/]*\.cn\/\w+\/[a-z0-9]{32}\/[a-z0-9]{32}\.m3u8,requires-body=0,script-path=https://raw.githubusercontent.com/hiknn/Rewrite/refs/heads/main/m3u8.js
+[MITM]
+
+hostname = %APPEND% 120play.*.cn
