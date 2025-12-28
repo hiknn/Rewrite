@@ -2,9 +2,8 @@
 #!desc=破解 zank 网站会员和金币视频
 #!author=hiknnnnnn
 
-
 [Script]
-m3u8 = type=http-request,pattern=^https:\/\/nbpzuk\.com\/video\/\d{8}\/\d{3}\/[a-z0-9]{30}\/index\.m3u8,requires-body=0,script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/m3u8/m3u8_2.js
+m3u8 = type=http-request,pattern=^https:\/\/nbpzuk\.com\/video\/\d{8}\/\d{3}\/[a-z0-9]{30}\/index\.m3u8,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/m3u8/m3u8_2.js,script-update-interval=0
 
 [MITM]
 hostname = %APPEND% nbpzuk.com
