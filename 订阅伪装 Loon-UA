@@ -1,0 +1,14 @@
+name: 订阅伪装Loon-UA
+description: 针对 sso.yuetoto.com 订阅，请求时替换UA为Loon，获取中文节点
+
+# 1. 必须开启 MITM 才能对该 HTTPS 域名进行请求头修改
+mitm:
+  hostnames:
+    - sso.yuetoto.com
+
+# 2. 编写头部重写规则，将 User-Agent 伪装成 Loon
+header_rewrites:
+  - add:
+      match: "^https://sso\\.yuetoto\\.com/"
+      name: User-Agent
+      value: Loon/3.1.6 (iOS; iOS 17.0)
