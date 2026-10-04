@@ -1,11 +1,11 @@
-name: 订阅伪装Loon-UA
-description: 针对 sso.yuetoto.com 订阅，请求时替换UA为Loon，获取中文节点
+name: 订阅伪装Surge-UA
+description: 针对 sso.yuetoto.com 订阅，请求时替换UA为Surge
 
 header_rewrites:
   - add:
       match: "^https://sso\\.yuetoto\\.com/"
       name: User-Agent
-      value: "Loon/3.1.6 (iOS; iOS 17.0)"
+      value: "Surge/5932 (iOS; iOS 17.0)"
 
 mitm:
   hostnames:
