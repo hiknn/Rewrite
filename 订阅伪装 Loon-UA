@@ -1,13 +1,8 @@
-name: 订阅伪装Surge-UA
-description: 针对 sso.yuetoto.com 订阅，请求时替换UA为Surge
+name: "悦通订阅 ua 伪装"
+description: "将 UA 伪装为 Clash 以获取中文节点"
 
-header_rewrites:
-  - add:
-      match: "^https://sso\\.yuetoto\\.com/"
-      name: User-Agent
-      value: "Surge/5932 (iOS; iOS 17.0)"
-
-mitm:
-  hostnames:
-    - sso.yuetoto.com
-
+header-rewrites:
+  - match: ^https:\/\/sso\.yuetoto\.com\/api\/v2\/avatar\/
+    type: request
+    headers:
+      User-Agent: "Clash/1.18.0"
